@@ -1,0 +1,10 @@
+node_modules
+<<<<<<< HEAD
+coverage
+output
+dist
+=======
+**/node_modules
+**/output
+**/dist
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
