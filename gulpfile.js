@@ -1,7 +1,11 @@
 // 引入 gulp及组件
 var gulp = require('gulp'),
 <<<<<<< HEAD
+<<<<<<< HEAD
     rev = require('gulp-rev'),
+=======
+    rev = require('gulp-rev')
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
     rev = require('gulp-rev')
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
@@ -15,6 +19,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     gulpSequence = require('gulp-sequence'),
     replace = require('gulp-replace'),
+<<<<<<< HEAD
 <<<<<<< HEAD
     htmlmin = require('gulp-htmlmin'),
     browserSync = require('browser-sync').create(),   //开启服务器，实时预览
@@ -30,6 +35,11 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),   //开启服务器，实时预览
     reload = browserSync.reload;
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
+=======
+    htmlmin = require('gulp-htmlmin');
+    browserSync = require('browser-sync').create(),   //开启服务器，实时预览
+    reload = browserSync.reload;
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 
 var path = {
   src   : "src/",
@@ -37,6 +47,7 @@ var path = {
   js    : "src/js/",
   img   : "src/images/",
   build : "build"
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -48,6 +59,10 @@ gulp.task('imgMin', function () {
         .pipe(gulp.dest('dist/assets/images/'))
 });
 
+=======
+}
+ 
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
 }
  
@@ -95,7 +110,10 @@ gulp.task('jsconcat-plugin-dev',function () {
 gulp.task('jsmin',function () {
     return gulp.src('output/*.js')
 <<<<<<< HEAD
+<<<<<<< HEAD
         //.pipe(stripDebug())
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
         .pipe(uglify())
@@ -163,6 +181,7 @@ gulp.task('movecss', function(){
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // gulp.task("es6", function () {
 //     return gulp.src("src/assets/js/**/*.*")
 //         .pipe(babel({
@@ -171,6 +190,8 @@ gulp.task('movecss', function(){
 //         .pipe(gulp.dest("src/assets/js/"));
 // });
 
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 
@@ -210,6 +231,7 @@ gulp.task('rev', function () {
 gulp.task('less', function () {
     return gulp.src(['src/less/*.less','src/less/_modules/*.less'])
 <<<<<<< HEAD
+<<<<<<< HEAD
         //错误提示
         .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
         .pipe(less())
@@ -219,12 +241,17 @@ gulp.task('less', function () {
 
 /*function handleError(err) {
 =======
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
         .pipe(less())
         .on('error', handleError)
         .pipe(gulp.dest('src/css'));
 });
 
 function handleError(err) {
+<<<<<<< HEAD
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
+=======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
   if (err.message) {
     console.log(err.message)
@@ -233,7 +260,11 @@ function handleError(err) {
   }
   this.emit('end')
 <<<<<<< HEAD
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
 }
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
@@ -261,7 +292,10 @@ gulp.task('dist-js-dev', function () {
 gulp.task('move-page-js', function () {
     return gulp.src('src/js/page/*.*')
 <<<<<<< HEAD
+<<<<<<< HEAD
         //.pipe(stripDebug())
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
         .pipe(uglify())
@@ -320,7 +354,11 @@ gulp.task('connectDev', function() {
     browserSync.init({
         server: "src",   //服务器根目录
 <<<<<<< HEAD
+<<<<<<< HEAD
         port: 8000
+=======
+        port: 8000,
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
         port: 8000,
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
@@ -337,7 +375,11 @@ gulp.task('connectDev-less', function() {
     browserSync.init({
         server: "src",   //服务器根目录
 <<<<<<< HEAD
+<<<<<<< HEAD
         port: 8000
+=======
+        port: 8000,
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
         port: 8000,
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
@@ -353,7 +395,11 @@ gulp.task('connectDev-less', function() {
 //gulp.task('build', ['clean','jsconcat','jsmin']);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 gulp.task('build', gulpSequence('clean','jsconcat','jsconcat-plugin','jsmin','cssconcat','cssconcat-plugin','cssmin','cssRev','movejs','movecss','AutoFx',['dist','distres','rev'],'htmlmin','replace','replace-sec','move-page-js','imgMin'));
+=======
+gulp.task('build', gulpSequence('clean','jsconcat','jsconcat-plugin','jsmin','cssconcat','cssconcat-plugin','cssmin','cssRev','movejs','movecss','AutoFx',['dist','distres','rev'],'htmlmin','replace','replace-sec','move-page-js'));
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
 gulp.task('build', gulpSequence('clean','jsconcat','jsconcat-plugin','jsmin','cssconcat','cssconcat-plugin','cssmin','cssRev','movejs','movecss','AutoFx',['dist','distres','rev'],'htmlmin','replace','replace-sec','move-page-js'));
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
@@ -365,17 +411,23 @@ gulp.task('build', gulpSequence('clean','jsconcat','jsconcat-plugin','jsmin','cs
 gulp.task('dev-re',function(callback){
      gulpSequence('less','jsconcat-dev','jsconcat-plugin','cssconcat-dev','cssconcat-dev-plugin','dist-dev','dist-js-dev')(callback);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 
 gulp.task('dev-re-less',function(callback){
      gulpSequence('less','jsconcat-dev','jsconcat-plugin','cssconcat-dev','dist-dev')(callback);
 });
 =======
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 })
 
 gulp.task('dev-re-less',function(callback){
      gulpSequence('less','jsconcat-dev','jsconcat-plugin','cssconcat-dev','dist-dev')(callback);
 })
+<<<<<<< HEAD
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
+=======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 
 gulp.task('default', ['build']);

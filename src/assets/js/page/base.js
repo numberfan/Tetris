@@ -1,6 +1,7 @@
 ;(function() {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	var SQUAREDATA = [
 			[
 				[0, 1, 0],
@@ -31,6 +32,8 @@
 			]
 		];
 
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 	var canvas,
@@ -65,6 +68,7 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	Tetris.prototype.initArray = function(cols, rows, placeNums) {
 		var cols = cols || 6,
 			rows = rows || 10,
@@ -83,6 +87,8 @@
 
 =======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 
 	Tetris.prototype.init = function() {//列数
 		var _this = this;
@@ -95,21 +101,28 @@
 		/*_this.fall();*/
 		timer = setInterval(function() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			_this.fall(context);
 		}, 500);
 
 		_this.mouseEvent(context);
 =======
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 			_this.fall();
 		}, 500);
 
 		_this.mouseEvent();
+<<<<<<< HEAD
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
+=======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 
 		//this.mouseEvent(this.nowSquare);
 	};
 
 	Tetris.prototype.randomSquare = function() {//随机方块
+<<<<<<< HEAD
 <<<<<<< HEAD
 		var num = Math.floor(Math.random() * SQUAREDATA.length);
 		return SQUAREDATA[num];
@@ -132,6 +145,8 @@
 
 		this.clearPrev(nowSquare);
 =======
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 		var num = Math.floor(Math.random() * square.length);
 		return square[num];
 	};
@@ -145,6 +160,9 @@
 		}
 
 		this.clearPrev(nowSquare, context);
+<<<<<<< HEAD
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
+=======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 		nowY++;
 		this.createTetris(nowSquare, context);
@@ -153,6 +171,7 @@
 		/*this.score();*/
 	};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	//消行
 	Tetris.prototype.clearLine = function() {
@@ -221,6 +240,8 @@
 
 =======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 	Tetris.prototype.gameOver = function() {
 		var colLen = coordinate[0].length,
 			count = 0;
@@ -261,8 +282,11 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	//碰撞检测
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 	Tetris.prototype.collisionDetect = function() {
@@ -286,11 +310,15 @@
 		for(var i = 0; i < arr.length; i++) {
 			for(var j = 0; j < arr[i].length; j++) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 				if (arr.length == coordinate.length) {
 					coordinate[i][j] = 0;
 				} else {
 					coordinate[i+nowY][j+nowX] = 0;
 				}
+=======
+				coordinate[i+nowY][j+nowX] = 0;
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
 				coordinate[i+nowY][j+nowX] = 0;
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
@@ -317,6 +345,7 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	Tetris.prototype.createTetris = function(arr, contex) {
 
 		for(var i = 0;i < arr.length; i++) {
@@ -332,6 +361,8 @@
 					}
 				}
 =======
+=======
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 	Tetris.prototype.createTetris = function(arr) {
 
 		for(var i = 0;i < arr.length; i++) {
@@ -340,6 +371,9 @@
 				if(!coordinate[i+nowY][j+nowX]){
 					coordinate[i+nowY][j+nowX] = arr[i][j];
 				}	
+<<<<<<< HEAD
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
+=======
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 			}
 		}
@@ -416,7 +450,11 @@
 	var tetris = new Tetris();
 	tetris.init(6);
 <<<<<<< HEAD
+<<<<<<< HEAD
 })(window);
+=======
+})();
+>>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
 =======
 })();
 >>>>>>> 13e76226d5dbb6a994dc4531a6e414adbe760827
